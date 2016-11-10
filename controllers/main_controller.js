@@ -19,7 +19,7 @@ Handles any interaction with the user and taking data from the factory and prese
     ------------------------------------------------------------------------------------------------------------------------------------------------------*/
 
     angular
-        .module('stabList')
+        .module('kristieglam')
         .controller('ToDoController', function(todo) {
 
             let vm = this;
