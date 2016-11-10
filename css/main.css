@@ -1,0 +1,59 @@
+.row {
+  background-color: black; }
+  .row nav {
+    width: 990px;
+    margin: 0 auto; }
+    .row nav img {
+      color: black;
+      max-width: 240px;
+      margin: 10px; }
+    .row nav ul {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 0;
+      padding-left: 70px;
+      font-size: 12px;
+      margin-left: 114px; }
+      .row nav ul li {
+        display: inline-block;
+        margin-left: 40px; }
+        .row nav ul li a {
+          color: white; }
+    .row nav .search {
+      display: inline-block;
+      color: white;
+      margin-top: 5px;
+      margin-left: 56px;
+      float: right;
+      font-size: 12px; }
+      .row nav .search h3 {
+        display: inline-block;
+        color: white;
+        font-size: 12px; }
+        .row nav .search h3 input {
+          margin-left: 5px; }
+
+body {
+  background-color: white; }
+
+.container .row.main {
+  background-color: white; }
+  .container .row.main .left {
+    background-color: grey; }
+  .container .row.main .right main .cat {
+    font-size: 14.5px;
+    color: grey; }
+  .container .row.main .right main .brand-logos {
+    list-style: none; }
+    .container .row.main .right main .brand-logos li {
+      display: inline-block; }
+    .container .row.main .right main .brand-logos .logo {
+      width: 120px; }
+
+.container footer .row.main-two {
+  background-color: white; }
+  .container footer .row.main-two .right h4 {
+    font-size: 10px;
+    text-align: center;
+    color: grey;
+    margin-top: 400px; }
