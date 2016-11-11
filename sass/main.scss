@@ -7,10 +7,19 @@ font-family: 'Muli', sans-serif;*/
 
 /*GLOBAL STYLES*/
 
-.body {
+$colorDark: #393E41;
+$colorMid: #C1B8B8;
+$colorLight: #F2EAEA;
+body {
      font-family: 'Muli', sans-serif;
-     background-color: whitesmoke;
+     background-color: $colorLight;
+     color: $colorDark;
 }
+
+.container {
+     width: 990px;
+}
+
 
 
 /*NAVIGATION*/
@@ -22,37 +31,33 @@ font-family: 'Muli', sans-serif;*/
           margin-bottom: 40px;
           nav {
                width: 100%;
-               /* margin: 0 auto; */
-               border-bottom: .5px solid #999999;
-               i {
-                    font-size: 18px;
-                    color: black;
+               border-bottom: .5px solid $colorMid;
+               display: inline-flex;
+               .camera {
+                    font-size: 16px;
                     margin-left: 25%;
-                    &:a{
-                         color: black;
-                    }
+                    margin-top: 13px;
+                    color: $colorDark;
                }
                h2 {
                     font-family: 'Grand Hotel', cursive;
                     font-size: 24px;
                     margin: 12px;
                     display: inline-block;
-                    border-left: 1px solid grey;
-                    padding-left: 13px;
+                    border-left: 1px solid $colorMid;
+                    padding-left: 10px;
+                    color: $colorDark;
                }
                ul {
-                    display: inline-block;
-                    margin-top: 20px;
-                    padding: 0;
-                    padding-left: 70px;
+                    margin-top: 17px;
+                    padding-left: 293px;
                     font-size: 12px;
-                    margin-right: 23%;
-                    float: right;
+                    display: inline-block;
                     li {
                          display: inline-block;
                          margin-left: 40px;
                          a {
-                              color: black;
+                              color: $colorDark;
                          }
                     }
                }
@@ -64,22 +69,53 @@ font-family: 'Muli', sans-serif;*/
 .col-md-3 {
      .photoStream {
           .like {
-               font-size: 38px;
+               font-size: 51px;
                color: white;
+               right: 90px;
+               bottom: 84px;
+               position: absolute;
+               z-index: 2;
           }
           img {
-               background-color: grey;
+               background-color: $colorDark;
                width: 100%;
-               height: 275px;
+               height: 214px;
                color: white;
                margin: 10px;
+               position: relative;
           }
      }
 }
 
+// DETAILS PAGE
+.imageDetail {
+     width: 100%;
+     background-color: $colorDark;
+     height: 500px;
+     color: white;
+}
+
+p {
+     font-size: 12px;
+}
+
+// EDIT PAGE
+button {
+     color: #393E41;
+     background-color: white;
+     padding-left: 10px;
+     padding-right: 10px;
+     padding-top: 4px;
+     padding-bottom: 4px;
+     font-size: 12px;
+     border: none;
+     border: .5px solid $colorMid;
+}
+
+//FOOTER
 footer {
      font-size: 10px;
      text-align: center;
-     color: grey;
+     color: $colorDark;
      margin-top: 400px;
 }

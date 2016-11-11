@@ -2,9 +2,13 @@
 <link href="https://fonts.googleapis.com/css?family=Muli:300,300i,400,400i" rel="stylesheet">
 font-family: 'Muli', sans-serif;*/
 /*GLOBAL STYLES*/
-.body {
+body {
   font-family: 'Muli', sans-serif;
-  background-color: whitesmoke; }
+  background-color: #F2EAEA;
+  color: #393E41; }
+
+.container {
+  width: 990px; }
 
 /*NAVIGATION*/
 .row .col-md-12 {
@@ -13,48 +17,70 @@ font-family: 'Muli', sans-serif;*/
   margin-bottom: 40px; }
   .row .col-md-12 nav {
     width: 100%;
-    /* margin: 0 auto; */
-    border-bottom: .5px solid #999999; }
-    .row .col-md-12 nav i {
-      font-size: 18px;
-      color: black;
-      margin-left: 25%; }
-      .row .col-md-12 nav i:a {
-        color: black; }
+    border-bottom: 0.5px solid #C1B8B8;
+    display: inline-flex; }
+    .row .col-md-12 nav .camera {
+      font-size: 16px;
+      margin-left: 25%;
+      margin-top: 13px;
+      color: #393E41; }
     .row .col-md-12 nav h2 {
       font-family: 'Grand Hotel', cursive;
       font-size: 24px;
       margin: 12px;
       display: inline-block;
-      border-left: 1px solid grey;
-      padding-left: 13px; }
+      border-left: 1px solid #C1B8B8;
+      padding-left: 10px;
+      color: #393E41; }
     .row .col-md-12 nav ul {
-      display: inline-block;
-      margin-top: 20px;
-      padding: 0;
-      padding-left: 70px;
+      margin-top: 17px;
+      padding-left: 293px;
       font-size: 12px;
-      margin-right: 23%;
-      float: right; }
+      display: inline-block; }
       .row .col-md-12 nav ul li {
         display: inline-block;
         margin-left: 40px; }
         .row .col-md-12 nav ul li a {
-          color: black; }
+          color: #393E41; }
 
 .col-md-3 .photoStream .like {
-  font-size: 38px;
-  color: white; }
+  font-size: 51px;
+  color: white;
+  right: 90px;
+  bottom: 84px;
+  position: absolute;
+  z-index: 2; }
 
 .col-md-3 .photoStream img {
-  background-color: grey;
+  background-color: #393E41;
   width: 100%;
-  height: 275px;
+  height: 214px;
   color: white;
-  margin: 10px; }
+  margin: 10px;
+  position: relative; }
+
+.imageDetail {
+  width: 100%;
+  background-color: #393E41;
+  height: 500px;
+  color: white; }
+
+p {
+  font-size: 12px; }
+
+button {
+  color: #393E41;
+  background-color: white;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  font-size: 12px;
+  border: none;
+  border: 0.5px solid #C1B8B8; }
 
 footer {
   font-size: 10px;
   text-align: center;
-  color: grey;
+  color: #393E41;
   margin-top: 400px; }
