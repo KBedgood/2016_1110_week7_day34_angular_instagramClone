@@ -43,12 +43,12 @@
                     url: '/',
                     templateUrl: 'partials/home.html'
                })
-               .state('category', {
-                    url: '/category',
+               .state('details', {
+                    url: '/details',
                     templateUrl: 'partials/details.html',
                })
-               .state('list', {
-                    url: '/list',
+               .state('edit', {
+                    url: '/edit',
                     templateUrl: 'partials/edit.html'
 
                });

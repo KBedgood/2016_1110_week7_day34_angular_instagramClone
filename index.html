@@ -11,6 +11,7 @@ A filter formats the value of an expression-->
      <title>Week 7. Day 34. kb</title>
      <meta charset="UTF-8">
      <meta name='author' content='Kristie Bedgood'>
+     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
      <link href="https://fonts.googleapis.com/css?family=Muli:300,300i,400,400i" rel="stylesheet">
      <link href="https://fonts.googleapis.com/css?family=Grand+Hotel" rel="stylesheet">
      <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
@@ -25,7 +26,10 @@ A filter formats the value of an expression-->
           <div class="row">
                <div class="col-md-12">
                     <nav>
-                         <h2>Kristiegram</h2>
+                         <i class="fa fa-camera" aria-hidden="true"></i>
+                         <div>
+                              <a ui-sref="home"><h2>KristieGlam</h2></a>
+                         </div>
                          <ul>
                               <li><a ui-sref="home">home</a></li>
                               <li><a ui-sref="details">details</a></li>
@@ -35,7 +39,7 @@ A filter formats the value of an expression-->
                </div>
           </div>
      </div>
-     <div class="container">
+     <div class="container main">
           <div class="row main">
                <main ui-view></main>
           </div>
@@ -43,6 +47,8 @@ A filter formats the value of an expression-->
      <footer><sup>
           2016 Kristie Bedgood, The Iron Yard. Assignment 2016_1107. Week 7. Day 34. All Rights Reserved.
      </sup></footer>
+     <script src="http://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
      <script src='main.js'></script>
      <script src='/factories/getPhotos_api_factory.js'></script>
 </body>
