@@ -1,15 +1,15 @@
-FONT FAMILY
 /*FONT FAMILIES
 <link href="https://fonts.googleapis.com/css?family=Muli:300,300i,400,400i" rel="stylesheet">
 font-family: 'Muli', sans-serif;*/
 
+// <link href="https://fonts.googleapis.com/css?family=Grand+Hotel" rel="stylesheet">
+// font-family: 'Grand Hotel', cursive;
 
 /*GLOBAL STYLES*/
 
 .body {
      font-family: 'Muli', sans-serif;
 }
-
 
 
 /*NAVIGATION*/
@@ -19,6 +19,10 @@ font-family: 'Muli', sans-serif;*/
      height: 75px;
      border-bottom: 1px solid grey;
      nav {
+          h2 {
+               size: 24px;
+               font-family: 'Grand Hotel', cursive;
+          }
           ul {
                li {
                     color: black: a {}

@@ -19,7 +19,7 @@ The FACTORY manipulates data (adding / deleting to array, marking as complete...
                const getPhotos = function() {
                     var promise = $http({
                          method: 'GET',
-                         Header: { 'X_CSRF_TOKEN': 'kristie' },
+                         Headers: { 'X_CSRF_TOKEN': 'kristie' },
                          url: 'http://instagramcloneclass.herokuapp.com/images'
                     });
                     return promise;
@@ -35,7 +35,7 @@ The FACTORY manipulates data (adding / deleting to array, marking as complete...
                }
 
                return {
-                    getPhotos
+                    getPhotos,
                     getSingleImage
                }
           });
