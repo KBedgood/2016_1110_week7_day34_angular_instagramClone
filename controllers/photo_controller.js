@@ -20,7 +20,7 @@ Handles any interaction with the user and taking data from the factory and prese
 
     angular
         .module('kristieglam')
-        .controller('ToDoController', function(todo) {
+        .controller('photoController', function(API) {
 
             let vm = this;
 
@@ -33,11 +33,29 @@ Handles any interaction with the user and taking data from the factory and prese
                 vm.items = todo.addData(content);
             }
 
+
+
             vm.delete = function(id) {
                 vm.items = todo.deleteData(id);
             }
 
-            vm.items = todo.getData();
+            /*----------------------------------------------------------------------------------------------------------------------------------------------------
+            getPhotos for view...
+            ------------------------------------------------------------------------------------------------------------------------------------------------------*/
+             let promise = API.getPhotos();
+
+             promise.then(function(returnedData) {
+                console.log(returnedData);
+                  vm.returnedPhotos = returnedData.data.images;
+             })
+
+             vm.onDoubleClickLike=function(id,photo){
+                let obj={
+                    imageid: id,
+                }
+                vm.clickedHeart = API.likeImage(obj);
+                photo.likes++;
+             }
 
         });
 })();

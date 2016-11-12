@@ -1,6 +1,9 @@
-<div class="col-md-3">
+<div ng-repeat="photo in controller.returnedPhotos track by $index" class="col-md-3">
      <div class="photoStream">
           <div class="like"><i class="fa fa-heart" aria-hidden="true"></i></div>
-          <img src="" alt="getPhotos">
+          <img src="{{photo.url}}" ng-click=controller.goToDetails(photo._id) ng-dblclick=controller.onDoubleClickLike(photo._id,photo) alt="getPhotos">
+     </div>
+     <div>
+          <p class="like">{{photo.likes}}</p>
      </div>
 </div>
