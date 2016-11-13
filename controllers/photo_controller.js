@@ -56,6 +56,5 @@ Handles any interaction with the user and taking data from the factory and prese
                 vm.clickedHeart = API.likeImage(obj);
                 photo.likes++;
              }
-
         });
 })();
