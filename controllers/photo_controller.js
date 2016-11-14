@@ -24,6 +24,7 @@ Handles any interaction with the user and taking data from the factory and prese
 
             let vm = this;
 
+
             /*----------------------------------------------------------------------------------------------------------------------------------------------------
             Pushes user info onto object on submit...
             ------------------------------------------------------------------------------------------------------------------------------------------------------*/
@@ -55,6 +56,13 @@ Handles any interaction with the user and taking data from the factory and prese
                 }
                 vm.clickedHeart = API.likeImage(obj);
                 photo.likes++;
+             }
+
+             vm.addPhoto= function(form){
+                let promise = API.createImage(form);
+                promise.then(function(response)){
+                    console.log(response)
+                }
              }
         });
 })();

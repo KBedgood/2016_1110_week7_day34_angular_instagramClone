@@ -1,12 +1,13 @@
 <div>
      <div class="col-md-12">
-          <label>image title</label>
-          <input type="text" name="" value="">
-          <label>url</label>
-          <input type="text" name="" value="">
-          <label>description</label>
-          <textarea name=""></textarea>
-          <button type="submit" ng-submit=controller.onSubmitAddPhoto(photo.) >capture this</button>
+          <form ng-model= >
+               <label>image title</label>
+               <input type="text" name="" value="" ng-model="controller.form.title">
+               <label>url</label>
+               <input type="text" name="" value="" ng-model="controller.form.url">
+               <label>description</label>
+               <textarea name="" ng-model="controller.form.description"></textarea>
+               <button type="submit" ng-submit=controller.onSubmitAddPhoto(photo.)>capture this</button>
+          </form>
      </div>
 </div>
-
