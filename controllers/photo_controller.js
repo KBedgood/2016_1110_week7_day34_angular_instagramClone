@@ -12,57 +12,87 @@ Handles any interaction with the user and taking data from the factory and prese
 ------------------------------------------------------------------------------------------------------------------------------------------------------*/
 
 (function() {
-    'use strict';
+     'use strict';
 
-    /*----------------------------------------------------------------------------------------------------------------------------------------------------
-    Save all inventory data into an array...
-    ------------------------------------------------------------------------------------------------------------------------------------------------------*/
+     /*----------------------------------------------------------------------------------------------------------------------------------------------------
+     Save all inventory data into an array...
+     ------------------------------------------------------------------------------------------------------------------------------------------------------*/
 
-    angular
-        .module('kristieglam')
-        .controller('photoController', function(API) {
+     angular
+          .module('kristieglam')
+          .controller('photoController', function(API, $state) {
 
-            let vm = this;
+               let vm = this;
 
+               // alert("TEST");
 
-            /*----------------------------------------------------------------------------------------------------------------------------------------------------
-            Pushes user info onto object on submit...
-            ------------------------------------------------------------------------------------------------------------------------------------------------------*/
+               // vm.alert = function(){
+               //  alert("TEST");
+               // }
 
-            vm.submit = function(content) {
-                vm.content = '';
-                vm.items = todo.addData(content);
-            }
+               /*----------------------------------------------------------------------------------------------------------------------------------------------------
+               Pushes user info onto object on submit...
+               ------------------------------------------------------------------------------------------------------------------------------------------------------*/
+               vm.submit = function(content) {
+                    vm.content = '';
+                    vm.items = todo.addData(content);
+               }
 
+               vm.delete = function(id) {
+                    vm.items = todo.deleteData(id);
+               }
 
+               /*----------------------------------------------------------------------------------------------------------------------------------------------------
+               getPhotos for view...
+               ------------------------------------------------------------------------------------------------------------------------------------------------------*/
+               let promise = API.getPhotos();
 
-            vm.delete = function(id) {
-                vm.items = todo.deleteData(id);
-            }
+               promise.then(function(returnedData) {
+                    console.log(returnedData);
+                    vm.returnedPhotos = returnedData.data.images;
+               })
 
-            /*----------------------------------------------------------------------------------------------------------------------------------------------------
-            getPhotos for view...
-            ------------------------------------------------------------------------------------------------------------------------------------------------------*/
-             let promise = API.getPhotos();
+               vm.onDoubleClickLike = function(id, photo) {
+                    let obj = {
+                         imageid: id,
+                    }
+                    vm.clickedHeart = API.likeImage(obj);
+                    photo.likes++;
+               }
 
-             promise.then(function(returnedData) {
-                console.log(returnedData);
-                  vm.returnedPhotos = returnedData.data.images;
-             })
+               // vm.onClickDetails = function(id, photo) {
+               //      $state.go('details', { id: id });
+               // }
 
-             vm.onDoubleClickLike=function(id,photo){
-                let obj={
-                    imageid: id,
-                }
-                vm.clickedHeart = API.likeImage(obj);
-                photo.likes++;
-             }
+               vm.addPhoto = function(form) {
+                    // alert("TEST");
+                    let image = {
+                         title: form.title,
+                         url: form.url,
+                         description: form.description
+                    };
 
-             vm.addPhoto= function(form){
-                let promise = API.createImage(form);
-                promise.then(function(response)){
-                    console.log(response)
-                }
-             }
-        });
+                    let promise = API.postImage(image);
+                    promise.then(function(response) {
+                         console.log(response)
+                         vm.form = {}; // resets, clears the form out
+                         window.location.assign("/#/") // redirects to home page after submit
+                    });
+               }
+          })
+
+     .controller('IDController', function(API, $state, $stateParams) {
+
+          let vm = this;
+
+          let id = $stateParams.id;
+
+          let photo = API.getSingleImage(id);
+          photo.then(function(response) {
+               // console.log(returnedPhotos);
+               vm.returnedPhotos = response.data;
+
+          })
+     });
+
 })();

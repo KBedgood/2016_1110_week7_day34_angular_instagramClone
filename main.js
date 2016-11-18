@@ -25,16 +25,16 @@
                     controllerAs: 'controller'
                })
                .state('details', {
-                    url: '/details',
+                    url: '/details/:id',
                     templateUrl: 'partials/details.html',
-                    ontroller: 'photoController',
+                    controller: 'IDController',
                     controllerAs: 'controller'
                })
                .state('add', {
                     url: '/add',
                     templateUrl: 'partials/add.html',
-                    ontroller: 'photoController',
+                    controller: 'photoController',
                     controllerAs: 'controller'
-               });
+               })
      }
 })();
